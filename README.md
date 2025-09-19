@@ -1,0 +1,2 @@
+# bulk-RNAseq-Snakemake
+Snakemake作为自动化生物信息学分析流程的工具。本脚本用于从Rawdata到得到Counts的一体化流程分析。
