@@ -35,8 +35,8 @@
 
 ### 克隆仓库：
  ```yaml
-    git clone https://github.com/yourusername/RNAseq_Snakemake_Pipeline.git
-    cd RNAseq_Snakemake_Pipeline
+git clone https://github.com/yourusername/RNAseq_Snakemake_Pipeline.git
+cd RNAseq_Snakemake_Pipeline
  ```
 
 ### 创建并激活 Conda 环境（推荐）：
@@ -45,6 +45,11 @@ conda create -n RNAseq_snakemake python=3.9
 conda activate RNAseq_snakemake
 pip install snakemake pandas pyyaml
  ```
+
+### 安装分析所需要的软件
+```yaml
+conda env create -f RNAseq_env.yaml
+```
 
 ### 编辑 config.yaml，指定文件路径和线程数。
 
