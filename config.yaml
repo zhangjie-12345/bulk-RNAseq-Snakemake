@@ -1,0 +1,19 @@
+# ==========================
+# RNA-seq pipeline config
+# ==========================
+# 样本表（制表符分隔，必须包含列：Experiment, R1, R2）
+samples_tsv: "Ab_bulk_RNAseq_colistin.tsv"
+#
+# 参考基因组
+genome_fasta: "Ref/GCF_009035845.1_ASM903584v1_genomic.fna"
+genome_gtf:   "Ref/GCF_009035845.1_ASM903584v1_genomic.gtf"
+#
+# STAR index 目录
+star_index: "03.STAR_align/STAR_Ref"
+#
+# 线程数
+threads:
+  fastp: 8
+  fastqc: 8
+  star: 20
+  featurecounts: 20
