@@ -31,6 +31,42 @@
 
 ---
 
+## 运行方法
+
+### 克隆仓库：
+ ```yaml
+    git clone https://github.com/yourusername/RNAseq_Snakemake_Pipeline.git
+    cd RNAseq_Snakemake_Pipeline
+ ```
+
+### 创建并激活 Conda 环境（推荐）：
+ ```yaml
+conda create -n RNAseq_snakemake python=3.9
+conda activate RNAseq_snakemake
+pip install snakemake pandas pyyaml
+ ```
+
+### 编辑 config.yaml，指定文件路径和线程数。
+
+运行流程：
+ ```yaml
+snakemake --cores 8
+ ```
+
+如需在集群运行，可使用 Snakemake 的集群执行参数。
+
+输出结果
+
+01.fastp_out/ : 修剪后的 FASTQ 文件及 QC 报告（HTML 和 JSON）
+
+02.fastqc_out/ : FastQC 报告（每个样本）
+
+03.STAR_align/ : 比对结果（BAM 文件和 STAR counts）
+
+04.featureCounts_out/ : 基因水平计数
+
+---
+
 ## 输入文件
 
 1. **原始 RNA-seq 数据（FASTQ 文件）**  
