@@ -50,7 +50,7 @@ pip install snakemake pandas pyyaml
 
 运行流程：
  ```yaml
-snakemake --cores 8
+snakemake --configfile config.yaml -j 40
  ```
 
 如需在集群运行，可使用 Snakemake 的集群执行参数。
